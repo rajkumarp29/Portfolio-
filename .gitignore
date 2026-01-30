@@ -1,0 +1,19 @@
+# IDE
+.metadata/
+.vscode/
+.settings/
+.project
+.classpath
+
+# Maven
+target/
+*.log
+
+# Node
+node_modules/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
