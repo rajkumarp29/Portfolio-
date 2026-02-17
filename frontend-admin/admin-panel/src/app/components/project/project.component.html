@@ -1,0 +1,27 @@
+<h2>Admin Projects</h2>
+
+<input placeholder="Title" [(ngModel)]="newProject.title" />
+<input placeholder="Description" [(ngModel)]="newProject.description" />
+
+<button (click)="saveProject()">
+  {{ editMode ? 'Update' : 'Save' }}
+</button>
+
+<hr />
+
+<table border="1">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let p of projects">
+    <td>{{ p.title }}</td>
+    <td>{{ p.description }}</td>
+    <td>
+      <button (click)="editProject(p)">Edit</button>
+      <button (click)="deleteProject(p.id)">Delete</button>
+    </td>
+  </tr>
+</table>
